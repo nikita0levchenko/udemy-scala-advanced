@@ -92,19 +92,19 @@ object MyStream {
 
 object StreamsPlayground extends App{
   val naturals = MyStream.from(1)(_ + 1)
-  println(naturals.head)
-  println(naturals.tail.head)
-  println(naturals.tail.tail.head)
-
+//  println(naturals.head)
+//  println(naturals.tail.head)
+//  println(naturals.tail.tail.head)
+//
   val startFrom0 = 0 #:: naturals // naturals.#::(0)
-  println(startFrom0.head)
-
-  startFrom0.take(10000).foreach(println)
-
-  // map, flatMap
-  println(startFrom0.map(_ * 2).take(100).toList())
-  println(startFrom0.flatMap(x => new Cons(x, new Cons(x + 1, EmptyStream))).take(10).toList())
-  println(startFrom0.filter(_ < 10).take(10).take(20).toList())
+//  println(startFrom0.head)
+//
+//  startFrom0.take(10000).foreach(println)
+//
+//  // map, flatMap
+//  println(startFrom0.map(_ * 2).take(100).toList())
+//  println(startFrom0.flatMap(x => new Cons(x, new Cons(x + 1, EmptyStream))).take(10).toList())
+//  println(startFrom0.filter(_ < 10).take(10).take(20).toList())
 
   // Exercises on streams
   // 1 - stream of Fibonacci numbers
@@ -151,6 +151,6 @@ object StreamsPlayground extends App{
     isPrimeRec(primes)
   }
 
-  primes.take(10000).foreach(println)
+  //primes.take(10000).foreach(println)
 
 }

@@ -3,9 +3,9 @@ package lectures.part2afp
 
 object PartialFunctions extends App {
 
-  val aFunction = (x: Int) => x + 1 // Function1[Int, Int] === Int => Int
+  val aFunction: Int => Int = (x: Int) => x + 1 // Function1[Int, Int] === Int => Int
 
-  val aFussyFunction = (x: Int) =>
+  val aFussyFunction: Int => Int = (x: Int) =>
     if (x == 1) 42
     else if (x == 2) 56
     else if (x == 5) 999
